@@ -38,6 +38,7 @@ class UnderlineColorViewController: SuperViewController {
     }
     
     func refreshLabel(color:UIColor){
+        // 下划线 不是0就代表，有下划线
         let dict = [NSAttributedStringKey.underlineStyle:1,NSAttributedStringKey.underlineColor:color] as [NSAttributedStringKey : Any]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

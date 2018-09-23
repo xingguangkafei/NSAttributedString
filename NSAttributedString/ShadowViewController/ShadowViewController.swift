@@ -38,6 +38,7 @@ class ShadowViewController: SuperViewController {
     }
     
     func refreshLabel(){
+        // 文字有阴影
         let red = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
         let green = CGFloat( arc4random_uniform(255))/CGFloat(255.0)
         let blue = CGFloat(arc4random_uniform(255))/CGFloat(255.0)

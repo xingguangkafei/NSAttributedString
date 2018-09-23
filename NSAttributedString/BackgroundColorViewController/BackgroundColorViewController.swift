@@ -41,6 +41,7 @@ class BackgroundColorViewController: SuperViewController {
     }
     
     func refreshLabel(color:UIColor){
+        // 改变文字显示出的颜色，默认从左起开始，到右边结束，中间的空格也会有颜色覆盖
         let dict = [NSAttributedStringKey.backgroundColor:color]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

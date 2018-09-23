@@ -38,6 +38,10 @@ class StrikethroughColorViewController: SuperViewController {
     }
     
     func refreshLabel(color:UIColor){
+        /*
+         strikethrough: n. 删除线，加删除线;
+         strikethroughStyle: 不是0就代表有删除线
+         */
         let dict = [NSAttributedStringKey.strikethroughStyle:1,NSAttributedStringKey.strikethroughColor:color] as [NSAttributedStringKey : Any]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

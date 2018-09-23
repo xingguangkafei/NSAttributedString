@@ -39,6 +39,10 @@ class KernViewController: SuperViewController {
     }
     
     func refreshLabel(index:Int){
+        /*
+         kerning n. 字距调整
+         这个可以调整字体间距，为1的时候，可以让字的间距填充满一行
+         */
         let dict = [NSAttributedStringKey.kern:index]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

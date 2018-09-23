@@ -37,6 +37,7 @@ class VerticalGlyphFormViewController: SuperViewController {
     }
     
     func refreshLabel(index:Float){
+        // 文档里写的设置完，这个值就会显示横向的文字排版或者竖向的文字排版，但是竖向的值设置后，运行起来却是只有标点符号换成竖向的，可能还需要设置其他属性
         let dict = [NSAttributedStringKey.verticalGlyphForm:index]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

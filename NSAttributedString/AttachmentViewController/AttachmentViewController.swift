@@ -38,32 +38,48 @@ class AttachmentViewController: SuperViewController {
     }
     
     func refreshLabel(index:Int){
+        // NSTextAttachment 可以带很多种属性，图片，文件...等等
         let attach = NSTextAttachment.init()
         switch index {
         case 0:
             attach.contents = Data.init(base64Encoded: "zhangfangtao", options: .ignoreUnknownCharacters)
+            attach.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
+            let insertAttachStr = NSAttributedString.init(attachment: attach)
+            let attrStr = NSMutableAttributedString.init(string: self.titleStr)
+            attrStr.insert(insertAttachStr, at: 6)
+            label.attributedText = attrStr
             break
         case 1:
             attach.fileType = "txt"
+            attach.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
+            let attrStr = NSMutableAttributedString.init(string: self.titleStr)
+            label.attributedText = attrStr
             break
         case 2:
             attach.image = UIImage.init(named: "icon")
+            attach.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
+            let imageStr = NSAttributedString.init(attachment: attach)
+            let attrStr = NSMutableAttributedString.init(string: self.titleStr)
+            attrStr.insert(imageStr, at: 6)
+            label.attributedText = attrStr
             break
         case 3:
             attach.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
+            let attrStr = NSMutableAttributedString.init(string: self.titleStr)
+            label.attributedText = attrStr
             break
         case 4:
+            // wrapper n. 包装材料；[包装] 包装纸；书皮
             let filewrapper = FileWrapper.init(symbolicLinkWithDestinationURL: URL.init(string: "www.baidu.com")!)
             attach.fileWrapper = filewrapper
+            attach.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
+            let attrStr = NSMutableAttributedString.init(string: self.titleStr)
+            label.attributedText = attrStr
         default:
             break
         }
         
-        attach.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
-        let imageStr = NSAttributedString.init(attachment: attach)
-        let attrStr = NSMutableAttributedString.init(string: self.titleStr)
-        attrStr.insert(imageStr, at: 6)
-        label.attributedText = attrStr
+        
     }
 }
 extension AttachmentViewController:UITableViewDataSource{

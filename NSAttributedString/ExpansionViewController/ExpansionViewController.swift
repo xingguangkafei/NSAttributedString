@@ -37,6 +37,7 @@ class ExpansionViewController: SuperViewController {
     }
     
     func refreshLabel(index:Float){
+        // expansion 膨胀； 会改变字体大小，横向的竖向的，只是大小会变形
         let dict = [NSAttributedStringKey.expansion:index]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

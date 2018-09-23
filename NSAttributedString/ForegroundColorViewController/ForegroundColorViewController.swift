@@ -39,6 +39,7 @@ class ForegroundColorViewController: SuperViewController {
     }
     
     func refreshLabel(color:UIColor){
+        // 相当于字体颜色
         let dict = [NSAttributedStringKey.foregroundColor:color]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

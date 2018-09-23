@@ -37,6 +37,7 @@ class TextEffectViewController: SuperViewController {
     }
     
     func refreshLabel(){
+        // 模拟器没有测出来什么...
         let dict = [NSAttributedStringKey.textEffect:NSAttributedString.TextEffectStyle.letterpressStyle]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

@@ -38,6 +38,7 @@ class ObliquenessViewController: SuperViewController {
     }
     
     func refreshLabel(index:Float){
+        // obliqueness : 倾斜；斜度；歪斜;    是一个或者正，或者负，表示倾斜的有多厉害
         let dict = [NSAttributedStringKey.obliqueness:index]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

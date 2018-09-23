@@ -38,6 +38,7 @@ class StrokeColorViewController: SuperViewController {
     }
     
     func refreshLabel(color:UIColor){
+        // 相当于改变文字颜色
         let dict = [NSAttributedStringKey.strokeColor:color,NSAttributedStringKey.strokeWidth:1] as [NSAttributedStringKey : Any]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

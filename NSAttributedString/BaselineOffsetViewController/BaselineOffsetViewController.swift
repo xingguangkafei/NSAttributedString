@@ -29,6 +29,7 @@ class BaselineOffsetViewController: SuperViewController {
     func initLabel(){
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: nil)
         label.attributedText = attrStr
+        label.backgroundColor = UIColor.red
     }
     
     func initTableView(){
@@ -38,6 +39,7 @@ class BaselineOffsetViewController: SuperViewController {
     }
     
     func refreshLabel(index:Int){
+        // 基准线的意思好像是 这个View的锚点的横竖线，偏移的话，文字内容就上移或者下移，而且文字行间距会变化
         let dict = [NSAttributedStringKey.baselineOffset:self.offsetArray[index]]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

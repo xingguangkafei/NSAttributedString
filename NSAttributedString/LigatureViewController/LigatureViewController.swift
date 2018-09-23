@@ -38,6 +38,10 @@ class LigatureViewController: SuperViewController {
     }
     
     func refreshLabel(index:Int){
+        /*
+         ligature n. 绷带；绳索；连字；连接物
+         就是有的挨着的两个字母连在一起 fl  → ﬂ ，模拟器不支持这种样式显示
+         */
         let dict = [NSAttributedStringKey.ligature:index]
         
         let attrStr = NSMutableAttributedString.init(string: self.titleStr + pinyin, attributes: dict)

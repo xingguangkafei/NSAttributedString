@@ -39,6 +39,7 @@ class StrokeWidthViewController: SuperViewController {
     }
     
     func refreshLabel(width:CGFloat){
+        // 文字的笔画会变得很粗，或者很细
         let dict = [NSAttributedStringKey.strokeColor:UIColor.red,NSAttributedStringKey.strokeWidth:width] as [NSAttributedStringKey : Any]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

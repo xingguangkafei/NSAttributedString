@@ -40,6 +40,7 @@ class StrikethroughStyleViewController: SuperViewController {
     }
     
     func refreshLabel(index:Int){
+         // 删除线
         let dict = [NSAttributedStringKey.strikethroughStyle:index]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr

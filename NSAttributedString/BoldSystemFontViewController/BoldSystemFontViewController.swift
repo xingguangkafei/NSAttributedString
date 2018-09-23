@@ -32,6 +32,7 @@ class BoldSystemFontViewController: SuperViewController {
     }
     
     func refreshLabel(font:UIFont){
+        // 修改字体，以及字体大小
         let dict = [NSAttributedStringKey.font:font]
         let attrStr = NSMutableAttributedString.init(string: self.titleStr, attributes: dict)
         label.attributedText = attrStr
